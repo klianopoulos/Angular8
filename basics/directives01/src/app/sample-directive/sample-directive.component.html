@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button 
+        class="btn btn-primary"
+        (click)="onButtonClick()">Display Details</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <p *ngIf="displayCheck">sample text</p>
+      <div
+      *ngFor="let item of textList; let i = index"
+      [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent'}"
+      [ngClass]="{'text-color': i > 4}"
+      >{{ paragraphText }}</div>
+    </div>
+  </div>
+</div>
